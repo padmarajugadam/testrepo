@@ -1,17 +1,5 @@
-pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh '''mvn -B -DskipTests clean package
-'''
-      }
-    }
-    stage('test') {
-      steps {
-        sh '''sh \'mvn test\' 
-'''
-      }
-    }
-  }
+@Library('pipeline-library-demo') _
+sayHello {
+    projectName = "Project1"
+    serverDomain = "Project1 Server Domain"
 }
