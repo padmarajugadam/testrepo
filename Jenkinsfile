@@ -46,11 +46,11 @@ stage('copyBin64') {
             steps {
                 //extracting the binaries  
     bat  '''del C:\\flx\\bin'
-	xcopy C:\\staging\\scm-server-1.60-app\\scm-server\\bin F:\\fix\\
+	xcopy C:\\staging\\scm-server-1.60-app\\scm-server\\bin C:\\flx\\
 	set year=%datetime:~0,4%
     set month=%datetime:~4,2%
     set day=%datetime:~6,2%
-	rename F:\\fix\\scm-server.bat F:\\fix\\scm-server_%year%%month%%day%.bat
+	rename C:\\fix\\scm-server.bat C:\\fix\\scm-server_%year%%month%%day%.bat
 '''
 }
 
