@@ -25,7 +25,7 @@ stage('Extract') {
             steps {
                 //extracting the binaries  
     bat '''cd C:\\staging
-    C:\\"Program Files"\\Java\\jdk1.8.0_181\\bin\\jar.exe -xv scm-server-1.60-app.zip
+    "C:\\Program Files\\Java\\jdk1.8.0_181\\bin\\jar.exe" -xv scm-server-1.60-app.zip
     
     '''
 
