@@ -1,5 +1,5 @@
 pipeline {
-node('windows') {
+node('windows') 
 stages {
         stage('FTP') { 
             steps {
@@ -53,6 +53,6 @@ stage('restart') {
 }
 
 }
-}
+
 }
 }
