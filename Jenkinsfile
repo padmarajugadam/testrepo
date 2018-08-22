@@ -24,7 +24,10 @@ stage('Extract') {
 	agent { label 'windows'}
             steps {
                 //extracting the binaries  
-    bat 'jar xf scm-server-1.60-app.zip'
+    bat '''cd C:\\staging
+    jar xf scm-server-1.60-app.zip
+    
+    '''
 
 }
 
