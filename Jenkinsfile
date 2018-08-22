@@ -1,6 +1,7 @@
 pipeline {
-	agent { label 'windows'}
+	
 stages {
+	agent { label 'windows'}
         stage('FTP') { 
             steps {
                 //connecting to ftp and downloading 
