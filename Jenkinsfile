@@ -46,7 +46,7 @@ stage('copyBin64') {
             steps {
                 //extracting the binaries  
     bat  '''del C:\\flx\\bin'
-	xcopy C:\\staging\\scm-server\\bin C:\\flx\\ /y /i /s
+	xcopy C:\\staging\\scm-server\\bin C:\\flx\\bin /y /i /s
 	for /f "tokens=2 delims==" %%G in ('wmic os get localdatetime /value') do set datetime=%%G
 	set year=%datetime:~0,4%
     set month=%datetime:~4,2%
