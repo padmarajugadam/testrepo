@@ -25,7 +25,7 @@ stage('Extract') {
             steps {
                 //extracting the binaries  
     bat '''cd C:\\staging
-    jar xf scm-server-1.60-app.zip
+    jar -xvf scm-server-1.60-app.zip
     
     '''
 
@@ -59,7 +59,7 @@ stage('restart') {
 	agent { label 'windows'}
             steps {
                 //restart the pc  
-    bat  'shutdown /r /f '
+    bat  'echo shutdown /r /f '
 }
 
 }
