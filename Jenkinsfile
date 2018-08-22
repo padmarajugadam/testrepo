@@ -1,5 +1,5 @@
 pipeline {
-agent ('windows') 
+	agent {'windows'}
 stages {
         stage('FTP') { 
             steps {
