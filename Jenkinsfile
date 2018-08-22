@@ -11,7 +11,6 @@ echo USER padmaraju chinna@123 >> scriptfile.txt
 echo cd C:\\ftp-client >> scriptfile.txt
 echo get scm-server-1.60-app.zip  >> scriptfile.txt
 ftp -n -v -s:scriptfile.txt
-bye
 '''
 
 }
