@@ -51,7 +51,7 @@ stage('copyBin64') {
 	set year=%datetime:~0,4%
     set month=%datetime:~4,2%
     set day=%datetime:~6,2%
-	rename C:\\flx\\bin\\scm-server.bat C:\\flx\\bin\\scm-server_%year%%month%%day%.bat
+	rename C:\\flx\\bin\\scm-server.bat scm-server_%year%%month%%day%.bat
 '''
 }
 
