@@ -1,7 +1,7 @@
 
 
 pipeline {
-	
+	agent { label 'windows'}
 stages {
 	
         stage('FTP') { 
