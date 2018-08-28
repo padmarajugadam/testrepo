@@ -1,11 +1,11 @@
 
 
 pipeline {
-	agent { label 'windows'}
+	agent window-slave
 stages {
 	
         stage('FTP') { 
-		agent { label 'windows'}
+		
             steps {
                 //connecting to ftp and downloading 
     bat '''cd C:\\staging
@@ -21,7 +21,7 @@ ftp -n -v -s:scriptfile.txt
 
 }
 stage('Extract') { 
-	agent { label 'windows'}
+	
             steps {
                 //extracting the binaries  
     bat '''cd C:\\staging
@@ -33,7 +33,7 @@ stage('Extract') {
 
 }
 stage('ServiceStop') { 
-	agent { label 'windows'}
+	
             steps {
                 //stoping the service  
     bat 'echo net stop Calculator'
@@ -42,7 +42,7 @@ stage('ServiceStop') {
 
 }
 stage('copyBin64') { 
-	agent { label 'windows'}
+	
             steps {
                 //extracting the binaries  
     bat  '''RD /S /Q C:\\flx\\bin
@@ -57,7 +57,7 @@ stage('copyBin64') {
 
 }
 stage('restart') { 
-	agent { label 'windows'}
+	
             steps {
                 //restart the pc  
     bat  'echo shutdown /r /f '
