@@ -1,7 +1,7 @@
 
 
 pipeline {
-	agent window-slave
+	node ('window-slave')
 stages {
 	
         stage('FTP') { 
